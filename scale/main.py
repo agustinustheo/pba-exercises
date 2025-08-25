@@ -34,22 +34,11 @@ def bitCharacterToBinary(arr):
 
 def bitCharacterToTotalNum(arr):
     print('')
+
     value = 0
-    for x in arr:
-        if x == 'a':
-            value += a
-        if x == 'b':
-            value += b
-        if x == 'c':
-            value += c
-        if x == 'd':
-            value += d
-        if x == 'e':
-            value += e
-        if x == 'f':
-            value += f
-        if x.isnumeric():
-            value += int(x)
+    for ch in arr:
+        value = value * 16 + int(ch, 16)  # use base-16
+    
     print(value)
         
 arr = '01ff'
